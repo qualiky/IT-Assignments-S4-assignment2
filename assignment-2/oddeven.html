@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check odd even number</title>
+    <script>
+        function compare() {
+            var num1 = parseInt(document.getElementById("inp1").value);
+
+            if(num1%2 == 0) {
+                document.getElementById("result-h5").innerHTML = "The number is even";
+            } else {
+                document.getElementById("result-h5").innerHTML = "The number is odd";
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter number: <input type="number" id="inp1"/><br>
+    <button type="button" onclick="compare()">Compare</button>
+    <h5 id="result-h5"></h5>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <script>
+        function calculateTax() {
+            var taxableAmt = parseInt(document.getElementById('income-box').value);
+            if(taxableAmt < 400000) {
+                document.getElementById('tax-amt').innerHTML = 0.01 * taxableAmt;
+            } else if(taxableAmt >= 400000 && taxableAmt < 500000) {
+                document.getElementById('tax-amt').innerHTML = 0.1 * taxableAmt;
+            } else {
+                document.getElementById('tax-amt').innerHTML = 0.2 * taxableAmt;
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter your income here: <input type="number" id="income-box"/> <br>
+    Your tax amount is: <p id="tax-amt"></p><br>
+    <button type="button" onclick="calculateTax()" >Calculate</button>
+    
+</body>
+</html>
